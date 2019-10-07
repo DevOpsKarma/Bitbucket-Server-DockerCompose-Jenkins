@@ -1,3 +1,4 @@
+### Content from: DevOpsKarma.com
 ## Bitbucket Server using Docker containers
 ### Deploy a Bitbucket server using Jenkins, Docker Compose and Ansible.
 
