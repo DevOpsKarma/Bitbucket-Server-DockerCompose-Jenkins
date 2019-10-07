@@ -1,0 +1,15 @@
+---
+- name: Network Getting Started First Playbook Extended
+  gather_facts: false
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+
+    - name: "wait for website to come up"
+      uri:
+          url: "http://127.0.0.1:7990/unavailable?next=/mvc/home"
+          status_code: 200
+      register: result
+      until: result.status == 200
+      retries: 6
+      delay: 7
